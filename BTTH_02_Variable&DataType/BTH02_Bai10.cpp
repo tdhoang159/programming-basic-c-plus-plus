@@ -9,14 +9,15 @@ void cau_a() {
     cout << "Ma ASCII cua ki tu " << c << " la: " << (int)c << endl; 
 }
 
-
-
-int main() {
-    //cau_a();
-
+void cau_b() {
     int code;
     cout << "Nhap vao 1 so nguyen: ";
     cin >> code;
     cout << "Ki tu co ma ASCII tuong ung voi " << code << " la: " << (char)code << endl;
+}
+int main() {
+    //cau_a();
+
+    cau_b();
     return 0;
 }
