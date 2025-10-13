@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int main() {
     int n;
     do {
@@ -9,21 +8,15 @@ int main() {
         if (n <= 0)
             cout << "Nhap sai! Vui long nhap lai." << endl;
     } while (n <= 0);
-
+    cout << "Cac thua so nguyen to cua " << n << " la: ";
     int temp = n;
-    int div = 1;
-    while (temp >= 10) {
-        temp /= 10;
-        div *= 10;
-    }
-
-    temp = n;
-    while (div > 0) {
-        int digit = temp / div;
-        cout << digit;
-        temp %= div;
-        div /= 10;
-        if (div > 0) cout << " ";
+    int i = 2; 
+    while (i <= temp) {
+        while (temp % i == 0) { 
+            cout << i << " ";
+            temp /= i; 
+        }
+        i++; 
     }
     cout << endl;
     return 0;

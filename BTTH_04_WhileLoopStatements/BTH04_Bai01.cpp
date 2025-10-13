@@ -8,8 +8,10 @@ int main() {
         cout << "Vui long nhap n > 0!" << endl;
     } else {
         int tong = 0;
-        for (int i = 1; i <= n; i++) {
+        int i = 1;
+        while (i <= n) {
             tong += i;
+            i++;
         }
         cout << "Tong cac so tu 1 den " << n << " la: " << tong << endl;
     }

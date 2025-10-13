@@ -6,13 +6,15 @@ int main() {
     cout << "Nhap mot so nhi phan: ";
     cin >> binary;
     int decimal = 0;
+    int i = 0;
     int n = binary.length();
-    for (int i = 0; i < n; i++) {
+    while (i < n) {
         if (binary[i] != '0' && binary[i] != '1') {
             cout << "Nhap sai! Day khong phai la so nhi phan." << endl;
             return 1;
         }
         decimal = decimal * 2 + (binary[i] - '0');
+        i++; 
     }
     cout << "So thap phan cua " << binary << " la: " << decimal << endl;
     return 0;

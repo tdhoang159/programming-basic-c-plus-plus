@@ -1,5 +1,5 @@
 #include <iostream>
-#include <limits>  // để dùng hằng số INT_MAX, INT_MIN
+#include <limits>
 using namespace std;
 int main() {
     int n;

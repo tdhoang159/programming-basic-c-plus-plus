@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath> 
 using namespace std;
-
 int main() {
     int n;
     cout << "Nhap mot so nguyen: ";
@@ -10,17 +9,18 @@ int main() {
         cout << n << " khong phai la so nguyen to." << endl;
     } else {
         bool laNguyenTo = true;
-        for (int i = 2; i <= sqrt(n); i++) {
+        int i = 2;
+        while (i <= sqrt(n)) {
             if (n % i == 0) {
                 laNguyenTo = false;
                 break;
             }
+            i++;
         }
         if (laNguyenTo)
             cout << n << " la so nguyen to." << endl;
         else
             cout << n << " khong phai la so nguyen to." << endl;
     }
-
     return 0;
 }

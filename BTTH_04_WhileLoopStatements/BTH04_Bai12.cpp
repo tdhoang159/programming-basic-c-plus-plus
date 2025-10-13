@@ -8,13 +8,21 @@ int main() {
         if (n <= 0)
             cout << "Nhap sai! Vui long nhap lai." << endl;
     } while (n <= 0);
-    cout << "Cac thua so nguyen to cua " << n << " la: ";
+
     int temp = n;
-    for (int i = 2; i <= temp; i++) {
-        while (temp % i == 0) {
-            cout << i << " ";
-            temp /= i; 
-        }
+    int div = 1;
+    while (temp >= 10) {
+        temp /= 10;
+        div *= 10;
+    }
+
+    temp = n;
+    while (div > 0) {
+        int digit = temp / div;
+        cout << digit;
+        temp %= div;
+        div /= 10;
+        if (div > 0) cout << " ";
     }
     cout << endl;
     return 0;
