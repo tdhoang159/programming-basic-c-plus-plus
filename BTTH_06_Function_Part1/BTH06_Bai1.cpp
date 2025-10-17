@@ -15,7 +15,7 @@ int main(){
     cin >> chieuDai;
     cout << "Nhap chieu rong HCN: ";
     cin >> chieuRong;
-    cout << "Dien tich HCN la: " << dienTichHCN(chieuDai, chieuRong) << endl;
+    cout << "Dien tich HCN la " << dienTichHCN(chieuDai, chieuRong) << endl;
     cout << "Chu vi HCN la: " << chuViHCN(chieuDai, chieuRong) << endl;
     return 0;
 }
